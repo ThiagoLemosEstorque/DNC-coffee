@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNC Coffee</title>
+    <link rel="website icon" type="svg" href="./assets/img/Logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cdf37a8868.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div id="logoDNC">
+                <img src="./assets/img/Logo.svg" alt="Logo DNC Coffe" width="20%">
+                <a>Dnc Coffee</a>
+            </div>
+        </div>
+        <ul id="listaMenu">
+            <li><a href="#cards">Home</a></li>
+            <li><a onclick="showModal('modalSobre')">Sobre</a></li>
+            <li><a onclick="showModal('modalAtendimento')">Atendimento</a></li>
+        </ul>
+        </div>
+        <button id="burguerMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <button id="btnMenu">
+            <p>Fazer pedido</p>
+            <i class="fa-solid fa-shop"></i>
+        </button>
+    </header>
+    <main style="width: 100%;">
+        <img src="./assets/img/principal.svg" alt="Imagem principal" width="100%">
+        <section id="cards">
+            <div class="card1">
+                <div class="cardImg">
+                    <img src="./assets/img/image 1.svg" width="100%" style="border-radius: 0.4rem 0.4rem 0 0;">
+                </div>
+                <div class="cardTexto">
+                    <p>Nossa loja de café se encontra em um lugar, 100% fictício, porém caso se sinta interessado
+                        pode vir tomar um café conosco em nossa sede em São José dos Campos.</p>
+                    <button>COMPRAR AGORA</button>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="cardImg">
+                    <img src="./assets/img/image 2.svg" width="100%" style="border-radius: 0.4rem 0.4rem 0 0;">
+                </div>
+                <div class="cardTexto">
+                    <p>Nossa casa de café é a melhor da região, aqui você tem tudo que precisa, uma boa conversar,
+                        bons
+                        amigos e um ambiente sem igual. Aproveite, pois Melhor que a DNC não existe!</p>
+                    <button>COMPRAR AGORA</button>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="cardImg">
+                    <img src="./assets/img/image 3.svg" width="100%" style="border-radius: 0.4rem 0.4rem 0 0;">
+                </div>
+                <div class="cardTexto">
+                    <p>Por que a DNC? Porque podem contar sempre com um serviço genuíno, uma atmosfera acolhedora e
+                        uma
+                        incrível xícara de café, torrado por especialistas e preparado de forma enriquecedora.</p>
+                    <button>COMPRAR AGORA</button>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="cardImg">
+                    <img src="./assets/img/image 4.svg" width="100%" style="border-radius: 0.4rem 0.4rem 0 0;">
+                </div>
+                <div class="cardTexto">
+                    <p>A escola especialista em formar talentos, com foco em empregabilidade, migração de carreira e
+                        aumento de performance.</p>
+                    <button>COMPRAR AGORA</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="modal" id="modalAtendimento">
+                <div class="modal-card">
+                    <i class="fa-solid fa-circle-xmark exit" onclick="closeModal()"></i>
+                    <h1>Atendimento</h1>
+                    <h3>Rua José de Alencar, 111, Centro<br>CEP: 12209-000 | +55 (11) 3333-8000</h3>
+                    <button>ENTRAR EM CONTATO</button>
+                </div>
+            </div>
+            <div class="modal" id="modalSobre">
+                <div class="modal-card">
+                    <i class="fa-solid fa-circle-xmark exit" onclick="closeModal()"></i>
+                    <h1>Quem somos nós?</h1>
+                    <h5>Tudo o que fazemos procura respeitar essa conexão, desde nosso compromisso com o café de melhor
+                        qualidade do mundo até a forma como nós interagimos com nossos clientes e nossas comunidades
+                        para conduzir nosso negócio de modo responsável.</h5>
+                    <img src="./assets/img/Rectangle 1.svg">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="modal.js"></script>
+    <script src="burguerMenu.js"></script>
+</body>
+
+</html>

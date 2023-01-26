@@ -1,0 +1,275 @@
+:root {
+    --braco-principal: #FFFFFF;
+    --cinza-principal: #2A3342;
+    --cinza-botao: #F6F5FB;
+    --preto-letras: #252423;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--braco-principal);
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto auto 55%;
+
+    padding: 1rem;
+    align-items: center;
+}
+
+#logoDNC {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    cursor: default;
+}
+
+#logoDNC img {
+    margin: 0.2rem;
+}
+
+#listaMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#listaMenu li {
+    list-style: none;
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+#listaMenu li a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cinza-principal);
+    text-decoration: none;
+}
+
+#btnMenu {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cinza-principal);
+
+    background-color: var(--braco-principal);
+    border: 0.1rem solid #D1D1D1;
+    border-radius: 1rem 1rem;
+
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-left: auto;
+
+    cursor: pointer;
+}
+
+#btnMenu i {
+    display: none;
+}
+
+#burguerMenu {
+    display: none;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1rem));
+    justify-content: space-evenly;
+
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.cardImg {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    transform: translateY(25%);
+    transition: 0.5s;
+}
+
+.cardTexto {
+    text-align: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.cardTexto p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--cinza-principal);
+
+    padding: 0.7rem;
+    text-align: justify;
+
+    cursor: default;
+}
+
+.cardTexto button,
+.modal-card button {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cinza-botao);
+    background-color: var(--cinza-principal);
+    border-style: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+
+    cursor: pointer;
+}
+
+.modal-card button {
+    padding: 0.5;
+    width: 50%;
+    margin: 1.5rem auto 1.5rem auto;
+}
+
+.card1:hover>div {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(217, 217, 217, 0.8);
+
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-card {
+    background-color: var(--cinza-botao);
+    border-radius: 1rem;
+    height: 55%;
+    width: 30%;
+    padding: 1rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-card h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--preto-letras);
+    padding: 2rem;
+}
+
+.modal-card h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--preto-letras);
+    padding: 2rem;
+}
+
+.modal-card h5 {
+    font-size: 0, 7rem;
+    font-weight: 300;
+    color: var(--preto-letras);
+}
+
+.modal-card img {
+    width: 20%;
+    margin: 1.5rem auto 1.5rem auto;
+}
+
+.exit {
+    color: var(--cinza-principal);
+    margin-left: auto;
+
+    cursor: pointer;
+}
+
+.visualizar {
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        grid-template-columns: auto;
+    }
+    
+    #logoDNC a {
+        display: none;
+    }
+
+    #logoDNC img {
+        display: block;
+        z-index: 3;
+
+        width: 2rem;
+    }
+
+    #btnMenu {
+        display: block;
+        z-index: 3;
+    }
+    
+    #btnMenu p {
+        display: none;
+    }
+
+    #btnMenu i {
+        display: block;
+    }
+
+    #listaMenu {
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        z-index: 2;
+        background-color: var(--braco-principal);
+
+        font-size: 4rem;
+    }
+
+    #burguerMenu {
+        display: block;
+        z-index: 3;
+        background: none;
+        border: none;
+
+        font-size: 1.5rem;
+    }
+
+    .modal {
+        z-index: 4;
+    }
+
+    .modal-card {
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+
+        border-radius: 0;
+    }
+
+    .exit {
+        margin: 2rem 0 0 auto;
+    }
+}
